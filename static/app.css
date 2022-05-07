@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: aqua;
+  width: 2rem;
+}
+
+table {
+  margin: 0 20rem;
+}
+
+.game-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: slategrey;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.game-trackers {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}

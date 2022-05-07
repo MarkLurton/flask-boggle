@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}Boggle!{% endblock %} {% block
+content %}
+<h1>Boggle!</h1>
+<div class="game-trackers">
+  <div class="game-tracker" id="scoreboard">
+    <span>Current Score:</span>
+    <span id="score">0</span>
+  </div>
+  <div class="game-tracker" id="game-clock">
+    <span>Time Remaining:</span>
+    <span id="time">60</span>
+  </div>
+</div>
+<div class="game-trackers">
+  <div class="game-tracker" id="high-scoreboard">
+    <span>High Score:</span>
+    <span id="high-score">{{high_score}}</span>
+  </div>
+  <div class="game-tracker" id="play-count">
+    <span>Games Played:</span>
+    <span id="games-played">{{games_played}}</span>
+  </div>
+</div>
+<table id="board">
+  {% for row in board %}
+  <tr>
+    {% for letter in row %}
+    <td>{{letter}}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+<form id="guess-form">
+  <input type="text" placeholder="guess" name="guess" id="guess" />
+  <button>Submit!</button>
+</form>
+{% endblock %}
